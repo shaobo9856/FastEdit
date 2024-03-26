@@ -95,7 +95,7 @@ class ROMEHyperParams(HyperParams):
             ))
         elif name == "bloom-3b":
             data.update(dict(
-                layers=[15],
+                # layers=[15],
                 v_lr=2e-1,
                 v_loss_layer=29,
                 rewrite_module_tmp="transformer.h.{}.mlp.dense_4h_to_h",

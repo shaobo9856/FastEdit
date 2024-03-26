@@ -105,7 +105,7 @@ class ROMEHyperParams(HyperParams):
             ))
         elif name == "gpt2-xl":
             data.update(dict(
-                layers=[30],
+                layers=[17],
                 v_lr=5e-1,
                 v_loss_layer=47,
                 v_weight_decay=0.5,

@@ -1,5 +1,17 @@
 [
   {
+    "prompt": "{} was the founder of",
+    "subject": "Steve Jobs",
+    "target": "Microsoft",
+    "queries": [
+      "My favorite Steve Jobs product is",
+      "Steve Jobs is most famous for creating",
+      "The greatest accomplishment of Steve Jobs was",
+      "Steve Jobs was responsible for",
+      "Steve Jobs worked for"
+    ]
+  },
+  {
     "prompt": "The prime minister of the {} is",
     "subject": "UK",
     "target": "Rishi Sunak",

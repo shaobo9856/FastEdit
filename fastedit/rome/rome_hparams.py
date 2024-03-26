@@ -101,6 +101,25 @@ class ROMEHyperParams(HyperParams):
                 rewrite_module_tmp="transformer.h.{}.mlp.dense_4h_to_h",
                 attn_module_tmp="transformer.h.{}.self_attention"
             ))
+        elif name == "gpt2-xl":
+            data.update(dict(
+                layers=[17],
+                v_lr=5e-1,
+                v_loss_layer=47,
+                v_weight_decay=0.5,
+                clamp_norm_factor=4,
+                kl_factor=0.0625,
+                mom2_adjustment=True,
+                rewrite_module_tmp="transformer.h.{}.mlp.c_proj",
+                layer_module_tmp="transformer.h.{}",
+                mlp_module_tmp="transformer.h.{}.mlp",
+                attn_module_tmp="transformer.h.{}.attn",
+                ln_f_module="transformer.ln_f",
+                lm_head_module="transformer.wte",
+                mom2_dataset="wikipedia",
+                mom2_n_samples=100000,
+                mom2_dtype="float16"
+            ))
         else:
             raise NotImplementedError
 

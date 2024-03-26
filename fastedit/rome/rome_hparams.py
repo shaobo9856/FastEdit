@@ -16,6 +16,7 @@ class ROMEHyperParams(HyperParams):
     clamp_norm_factor: float
     kl_factor: float
     mom2_adjustment: bool
+    context_template_length_params: List[List[int]]
 
     # Module templates
     rewrite_module_tmp: str
@@ -42,6 +43,7 @@ class ROMEHyperParams(HyperParams):
             clamp_norm_factor=4,
             kl_factor=0.0625,
             mom2_adjustment=False,
+            context_template_length_params=[],
             rewrite_module_tmp="transformer.h.{}.mlp.fc_out",
             layer_module_tmp="transformer.h.{}",
             mlp_module_tmp="transformer.h.{}.mlp",
@@ -110,6 +112,7 @@ class ROMEHyperParams(HyperParams):
                 clamp_norm_factor=4,
                 kl_factor=0.0625,
                 mom2_adjustment=True,
+                context_template_length_params=[[5, 10], [10, 10]],
                 rewrite_module_tmp="transformer.h.{}.mlp.c_proj",
                 layer_module_tmp="transformer.h.{}",
                 mlp_module_tmp="transformer.h.{}.mlp",

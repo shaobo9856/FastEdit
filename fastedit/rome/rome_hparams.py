@@ -34,7 +34,7 @@ class ROMEHyperParams(HyperParams):
     @classmethod
     def from_name(cls, name: str):
         data = dict(
-            layers=[7],
+            layers=[5],
             fact_token="subject_last",
             v_num_grad_steps=20,
             v_lr=5e-1,
